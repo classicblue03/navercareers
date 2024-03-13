@@ -1,0 +1,853 @@
+.sc-visual .swiper-slide .img-box {
+    height: 544px;
+}
+
+.sc-visual .swiper-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    /* 이벤트빼기 선택안됨 */
+}
+
+.sc-visual .swiper-slide h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+.sc-visual .swiper-slide h3 span {
+    overflow: hidden;
+    line-height: 1.2;
+    font-size: 100px;
+    letter-spacing: -2.4px;
+    font-weight: 800;
+    width: 0%;
+    white-space: nowrap;
+    /* white-space: nowrap 속성은 width값에 영향을 준다 */
+    color: #fff;
+    text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.16);
+    display: block;
+    opacity: 0;
+    transition: opacity 1s 0.5s, width 0.8s 0.5s;
+}
+
+.sc-visual .swiper-slide-active h3 span {
+    opacity: 1;
+    width: 100%;
+}
+
+.sc-visual .swiper-slide h3 span br {
+    display: none;
+}
+
+.sc-search {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fafafa;
+}
+
+.sc-search .m-searchbox {
+    display: none;
+}
+
+.sc-search .m-searchbox.on {
+    transform: translateY(0%);
+}
+
+.sc-search .group-title {
+    padding: 126px 104px 0;
+    max-width: 1408px;
+    min-width: 1230px;
+    margin: 0 auto;
+}
+
+.sc-search .fixed-searchbar {
+    z-index: 1;
+    position: relative;
+    top: -27px;
+    left: 104px;
+    right: 105px;
+    position: absolute;
+}
+
+.sc-search .fixed-searchbar .flex-area {
+    display: flex;
+    height: 54px;
+    background: #fff;
+}
+
+.sc-search .fixed-searchbar .keyword-search {
+    display: flex;
+    align-items: center;
+    padding: 0 28px 0 21px;
+    background: #fff;
+}
+
+.sc-search .fixed-searchbar .keyword-search .icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-position: -245px -40px;
+}
+
+.sc-search .fixed-searchbar .input-box {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.sc-search .fixed-searchbar .input-box input {
+    flex: 1;
+    height: 100%;
+    padding: 0 20px 0 0;
+    cursor: pointer;
+}
+
+.sc-search .fixed-searchbar .input-box input::placeholder {
+    font-size: 14px;
+    font-weight: 800;
+    color: #d0d0d0;
+}
+
+.sc-search .fixed-searchbar label {
+    font-weight: 800;
+}
+
+.sc-search .fixed-searchbar .input-box label {
+    margin-right: 9px;
+}
+
+.sc-search .fixed-searchbar .select-box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.sc-search .fixed-searchbar .select-box select {
+    flex: 1;
+    height: 100%;
+    padding: 0 25px 0 9px;
+    color: #d0d0d0;
+    font-weight: 800;
+    background: url(../images/ico/ico_arrow_down.png) no-repeat right 10px center/8px;
+}
+
+.sc-search .fixed-searchbar .select-box select option[value=""][disabled] {
+    display: none;
+}
+
+.sc-search .fixed-searchbar .btn-submit {
+    width: 97px;
+    color: #fff;
+    font-family: 'TTHoves';
+    font-weight: 800;
+    background: #000;
+}
+
+.sc-search .fixed-searchbar .btn-submit:hover {
+    color: #000;
+    background: #16ef72;
+}
+
+.sc-teams {
+    position: relative;
+    background: #fafafa;
+}
+
+.sc-teams .link-list {
+    margin-top: 70px;
+}
+
+.sc-teams .link-item:hover {
+    background: #ebebeb;
+}
+
+.sc-teams .link-item .link {
+    display: block;
+}
+
+.sc-teams .link-item .flex-wrap {
+    display: flex;
+}
+
+.sc-teams .link-item .tit-box {
+    width: 50%;
+    font-size: 38px;
+    padding: 20px 0;
+}
+
+.sc-teams .link-item .tit-box .tit {
+    display: inline-block;
+    line-height: 60px;
+    vertical-align: top;
+    font-size: 38px;
+    letter-spacing: -0.34px;
+    font-weight: normal;
+    font-weight: 500;
+}
+
+.sc-teams .link-item .tit-box .num {
+    position: relative;
+    margin-left: 18px;
+    font-size: 15px;
+    letter-spacing: -0.3px;
+}
+
+.sc-teams .link-item .tit-box .num::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -14px;
+    width: 9px;
+    height: 9px;
+    background-position: -176px -105px;
+}
+
+.sc-teams .link-item .desc {
+    width: 50%;
+    line-height: 60px;
+    padding: 20px 0 20px 15px;
+    vertical-align: top;
+    font-size: 22px;
+    letter-spacing: -0.44px;
+    box-sizing: border-box;
+}
+
+.mobile-lnb {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    overflow-y: scroll;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: 100%;
+    height: 100%;
+    padding: 60px 32px;
+    transition: .3s;
+    background: #fff;
+}
+
+.sc-people {
+    overflow: hidden;
+    position: relative;
+    padding: 95px 0 0;
+}
+
+.sc-people .swiper {
+    overflow: initial;
+    margin-top: 60px;
+    padding-bottom: 68px;
+}
+
+.sc-people .swiper .swiper-slide {
+    max-width: 919px;
+}
+
+.sc-people .swiper .img-wrap {
+    position: relative;
+    padding-bottom: calc((520/1097)*100%);
+    /* 슬라이드 이미지 크기 width 1097 height 520 */
+}
+
+.sc-people .swiper .img-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sc-people .swiper .text-area {
+    margin-top: 29px;
+}
+
+.sc-people .swiper .text-area .tit {
+    display: inline-block;
+    padding-right: 26px;
+    line-height: 36px;
+    font-size: 25px;
+    letter-spacing: -0.5px;
+    font-weight: 600;
+}
+
+.sc-people .swiper .text-area .link-direct {
+    margin-top: 4px;
+}
+
+.sc-people .swiper .text-area .sub-wrap {
+    display: flex;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.sc-people .swiper .text-area .sub-wrap span {
+    line-height: 14px;
+    font-family: 'NanumSquare';
+    letter-spacing: -0.28px;
+}
+
+.sc-people .swiper .text-area .sub-wrap .corp {
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.sc-people .swiper .text-area .sub-wrap .corp::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -6px;
+    width: 1px;
+    height: 10px;
+    background-color: #000;
+    transform: translateY(-50%);
+}
+
+.sc-benefits {
+    padding-top: 112px;
+}
+
+.sc-benefits .swiper {
+    padding-bottom: 68px;
+    margin-top: 55px;
+}
+
+.sc-benefits .swiper .img-wrap {
+    position: relative;
+    padding-bottom: 100%;
+    margin-bottom: 29px;
+}
+
+.sc-benefits .swiper .img-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sc-benefits .swiper .tit {
+    display: block;
+    font-size: 25px;
+}
+
+.sc-benefits .swiper .desc {
+    margin-top: 20px;
+    line-height: 30px;
+    font-size: 18px;
+    letter-spacing: -0.36px;
+    color: #000;
+}
+
+.sc-board {
+    padding: 95px 0 102px;
+}
+
+.sc-board .title {
+    line-height: 32px;
+    font-size: 25px;
+    letter-spacing: -0.25px;
+    color: #000;
+    font-weight: 600;
+}
+
+.sc-board .link-recruit {
+    position: relative;
+    display: inline-block;
+    margin-top: 18px;
+    vertical-align: top;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.sc-board .link-recruit::after {
+    content: '';
+    display: inline-block;
+    width: 33px;
+    height: 32px;
+    margin-left: 11px;
+    vertical-align: middle;
+    background-position: -76px -172px;
+}
+
+.sc-teams .m-searchbox .icon-box .icon {
+    background-size: 195px 181px;
+    background-position: -140px -125px;
+}
+
+.hidden-lnb {
+    display: none;
+}
+
+
+@media (max-width: 1230px) {
+    .sc-visual .swiper-slide h3 span {
+        font-size: 60px;
+    }
+
+    .sc-people .swiper .swiper-slide {
+        width: 100% !important;
+    }
+
+    .sc-teams .link-item .tit-box .num {
+        margin: 4px 0 0 14px;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.28px;
+    }
+
+    .sc-benefits {
+        padding-top: 0;
+    }
+
+    .sc-benefits .swiper .desc br {
+        display: none;
+    }
+
+    .sc-benefits .swiper .tit {
+        font-size: 18px;
+    }
+
+    .sc-benefits .swiper .desc {
+        margin-top: 3px;
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: -0.28px;
+    }
+
+    .sc-board .link-recruit {
+        margin-top: 16px;
+        line-height: 26px;
+        font-size: 16px;
+        letter-spacing: -0.32px;
+    }
+
+    /* .hidden-lnb,
+    .sc-search .search-area {
+        display: none;
+    } */
+
+
+    /* hidden-lnb 공통 */
+    .hidden-lnb {
+        display: none;
+        position: relative;
+        z-index: 15;
+    }
+
+    .hidden-lnb.on {
+        display: block;
+    }
+
+    .hidden-lnb .lnb-inner {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        padding: 60px 32px;
+        overflow: auto;
+    }
+
+    /* 1. hidden-lnb - Search  */
+    .hidden-lnb .group-search form fieldset {
+        border: none;
+    }
+
+    .hidden-lnb .group-search .input-wrap {
+        position: relative;
+    }
+
+    .hidden-lnb .group-search input {
+        border: none;
+        line-height: 26px;
+        letter-spacing: -0.28px;
+        text-align: left;
+        width: 100%;
+        padding: 6px 30px 6px 0;
+        font-size: 14px;
+        border-bottom: 1px solid #d0d0d0;
+    }
+
+    .hidden-lnb .group-search input:focus {
+        outline: none;
+        border-bottom: 1px solid #000;
+    }
+
+    .hidden-lnb .group-search .btn-search {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 15px;
+        height: 15px;
+        transform: translateY(-50%);
+        background-position: -268px -40px;
+    }
+
+    /* 2. hidden-lnb - Menu  */
+    .hidden-lnb .group-menu .ico-arrow {
+        /* 공통 */
+        position: absolute;
+        top: 9px;
+        left: 2px;
+        background-position: -136px -93px;
+        width: 8px;
+        height: 5px;
+    }
+
+    .hidden-lnb .group-menu .menu-item .tit {
+        /* 공통 */
+        display: inline-block;
+        padding-left: 19px;
+        line-height: 26px;
+        letter-spacing: -0.28px;
+        font-weight: 400;
+        font-size: 14px;
+        font-family: 'NanumSquare';
+        cursor: pointer;
+    }
+
+    .hidden-lnb .group-menu {
+        margin-top: 45px;
+    }
+
+    .hidden-lnb .group-menu .menu-area {
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .hidden-lnb .group-menu .menu-tit,
+    .hidden-lnb .group-menu .filter-tit {
+        line-height: 26px;
+        letter-spacing: -0.28px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .hidden-lnb .group-menu .menu-list {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 14px;
+        font-family: 'NanumSquare';
+    }
+
+    .hidden-lnb .group-menu .menu-item {
+        position: relative;
+        line-height: 26px;
+        letter-spacing: -0.28px;
+    }
+
+    .hidden-lnb .group-menu .menu-item.on .cate-list {
+        display: block;
+    }
+
+    .hidden-lnb .group-menu .menu-item .ico-arrow.on {
+        transform: rotate(180deg);
+    }
+
+    .hidden-lnb .group-menu .cate-list {
+        padding-left: 16px;
+    }
+
+    .hidden-lnb .group-menu .cate-item {
+        position: relative;
+        line-height: 26px;
+        letter-spacing: -0.28px;
+        margin-top: 14px;
+        font-size: 14px;
+    }
+
+    .hidden-lnb .group-menu .cate-item.on .job-list {
+        display: block;
+    }
+
+    .hidden-lnb .group-menu .cate-all {
+        margin-top: 14px;
+    }
+
+    .hidden-lnb .group-menu .cate-list,
+    .hidden-lnb .group-menu .job-list {
+        display: none;
+    }
+
+    .hidden-lnb .group-menu .cate-list.on,
+    .hidden-lnb .group-menu .job-list.on {
+        display: block;
+    }
+
+    .hidden-lnb .group-menu .job-list {
+        padding-left: 16px;
+        margin-top: 14px;
+    }
+
+    .hidden-lnb .group-menu .job-item {
+        margin-top: 14px;
+    }
+
+    .hidden-lnb .group-menu .job-item label {
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: -0.28px;
+    }
+
+    .hidden-lnb .group-menu .filter-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .hidden-lnb .group-menu label::before {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #d0d0d0;
+        border-radius: 50%;
+        margin-right: 8px;
+    }
+
+    .hidden-lnb .group-menu input:checked+label::before {
+        background: #000;
+    }
+
+    .hidden-lnb .btn-clear {
+        margin-top: 42px;
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: -0.24px;
+        text-decoration: underline;
+    }
+
+    .hidden-lnb .btn-close {
+        position: absolute;
+        top: 24px;
+        left: 22px;
+        background: url(../images/sp_mo.png) no-repeat;
+        background-size: 195px 181px;
+        background-position: -110px -28px;
+        width: 14px;
+        height: 14px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .main .link-direct {
+        line-height: 22px;
+        font-size: 12px;
+        letter-spacing: -0.24px;
+    }
+
+    .main .group-title .title {
+        margin-bottom: 11px;
+        line-height: 50px;
+        font-size: 36px;
+        letter-spacing: -0.7px;
+    }
+
+    .main .group-title .desc {
+        padding-right: 20px;
+        line-height: 26px;
+        font-size: 16px;
+        letter-spacing: -0.32px;
+    }
+
+    .sc-visual .swiper-slide .img-box {
+        position: relative;
+        height: auto;
+        padding-bottom: 62.4%;
+    }
+
+    .sc-visual .swiper-slide .img-box video {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .sc-visual .swiper-slide h3 span {
+        font-size: 40px;
+        width: 100%;
+    }
+
+    .sc-visual .swiper-slide h3 span br {
+        display: block;
+    }
+
+    .sc-teams .link-list {
+        margin-top: 20px;
+    }
+
+    .sc-teams .link-item .link {
+        padding: 16px 0;
+    }
+
+    .sc-teams .link-item .flex-wrap {
+        flex-direction: column;
+    }
+
+    .sc-teams .link-item .tit-box {
+        padding: 0;
+    }
+
+    .sc-teams .link-item .tit-box .tit {
+        font-size: 24px;
+        line-height: 38px;
+        letter-spacing: -0.48px;
+    }
+
+    /* .sc-teams .link-item .tit-box .num::after {
+        width: 11px;
+        height: 11px;
+        background: url(../images/sp_mo.png) no-repeat;
+        background-size: 195px 181px;
+        background-position: -129px -28px;
+    } */
+
+    .sc-teams .link-item .desc {
+        margin-top: 1px;
+        width: 100%;
+        padding: 0;
+        line-height: 26px;
+        font-size: 16px;
+        letter-spacing: -0.32px;
+    }
+
+    .sc-teams .mobile-search {
+        display: block;
+        width: 100%;
+        padding: 10px 45px 10px 10px;
+        line-height: 22px;
+        font-size: 14px;
+        letter-spacing: -0.28px;
+        color: #696868;
+        font-weight: 800;
+        box-sizing: border-box;
+        background: #ebebeb;
+    }
+
+    .sc-search .fixed-searchbar {
+        display: none;
+    }
+
+    .sc-search .m-searchbox {
+        position: relative;
+        display: block;
+    }
+
+    .sc-search .m-searchbox button {
+        position: relative;
+        width: 100%;
+        padding: 10px 45px 10px 10px;
+        line-height: 22px;
+        text-align: left;
+        font-size: 14px;
+        letter-spacing: -0.28px;
+        font-weight: 800;
+        color: #696868;
+        background: #ebebeb;
+        box-sizing: border-box;
+        margin-bottom: 50px;
+    }
+
+    .sc-search .m-searchbox .icon-box {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 12px 10px 11px;
+    }
+
+    .sc-search .m-searchbox .icon-box .icon {
+        display: block;
+        width: 19px;
+        height: 19px;
+        background-position: -140px -125px;
+    }
+
+    .sc-search .group-title {
+        padding: 0 22px;
+    }
+
+    .sc-teams {
+        padding: 22px 0 50px;
+    }
+
+    .sc-people {
+        padding: 68px 0 56px;
+    }
+
+    .sc-people .swiper .text-area .interview {
+        opacity: 0;
+    }
+
+    .sc-people .swiper {
+        margin: 25px 0 0;
+        padding-bottom: 46px;
+    }
+
+    .sc-people .swiper .img-wrap {
+        padding-bottom: 100%;
+    }
+
+    .sc-people .swiper .text-area {
+        margin-top: 21px;
+    }
+
+    .sc-people .swiper .text-area .tit {
+        line-height: 28px;
+        font-size: 18px;
+        letter-spacing: -0.36px;
+    }
+
+    .sc-benefits .swiper {
+        margin: 25px 0 0;
+        padding-bottom: 46px;
+    }
+
+    .sc-benefits .swiper-slide .desc br {
+        display: none
+    }
+
+    .sc-benefits .swiper .img-wrap {
+        margin-top: 21px;
+    }
+
+    .sc-benefits .link-direct .tit {
+        line-height: 28px;
+        font-size: 18px;
+        letter-spacing: -0.36px;
+    }
+
+    .sc-benefits .link-direct .desc {
+        margin-top: 3px;
+        line-height: 26px;
+        font-size: 14px;
+        letter-spacing: -0.28px;
+    }
+
+    .sc-board {
+        padding: 71px 0 99px;
+    }
+
+    .sc-board .title {
+        line-height: 34px;
+        font-size: 20px;
+        letter-spacing: -0.4px;
+    }
+
+    .mobile-lnb.on {
+        display: block;
+        transform: translateY(0%);
+    }
+}
