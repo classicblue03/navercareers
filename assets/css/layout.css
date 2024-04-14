@@ -1,0 +1,560 @@
+@import './fonts.css';
+@import './reset.css';
+@import './common.css';
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    min-width: 1229px;
+    padding-top: 64px;
+}
+
+.header .inner,
+.footer .inner {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 104px 0 98px;
+}
+
+.header {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+}
+
+.header.on::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 182px;
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.header .inner {
+    display: flex;
+    align-items: center;
+    height: 64px;
+}
+
+.header .logo a {
+    display: block;
+    width: 223px;
+    height: 35px;
+    background-position: -105px 0;
+}
+
+.gnb>ul {}
+
+.gnb .link-list {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.gnb .link-list .link {
+    display: block;
+    padding: 0 10px;
+    line-height: 32px;
+    font-size: 17px;
+    letter-spacing: -0.36px;
+}
+
+.gnb .link-list .link:hover span {
+    text-decoration: underline;
+}
+
+.header .slide-btn,
+.header .slide-nav {
+    display: none;
+}
+
+.header .lang-wrap {
+    position: relative;
+}
+
+.header .lang-box {
+    padding: 0 10px;
+}
+
+.header .lang-wrap .curr {
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.36px;
+}
+
+.header .lang-wrap .arrow {
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    margin: 13px 0 0 3px;
+    background-position: -122px -93px;
+    transform: rotate(0);
+    vertical-align: top;
+}
+
+.header .lang-wrap.active .arrow {
+    transform: rotate(180deg);
+}
+
+.header .lang-wrap.active .en-box {
+    /* z-index: 10; */
+    display: block;
+    position: absolute;
+    top: auto;
+    left: 0;
+    background: #fff;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.header .en-box {
+    display: none;
+}
+
+.header .en-box .link-en {
+    display: block;
+    padding: 0 10px;
+    line-height: 32px;
+    font-size: 17px;
+    letter-spacing: -0.36px;
+}
+
+.gnb {
+    display: block;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-left: 29px;
+}
+
+.gnb .menu-list {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    height: 100%;
+    /* nav-list의 flex 속성으로 nav-item은 100% 높이를 가진다.  */
+}
+
+.gnb .nav-item {
+    position: relative;
+    /* sub-list의 기준 */
+    display: flex;
+    align-items: center;
+}
+
+.gnb .nav-item .nav {
+    display: block;
+    padding: 0 10px;
+    line-height: 32px;
+    font-size: 17px;
+    letter-spacing: -0.36px;
+    font-weight: 500;
+}
+
+.gnb .nav-item .nav:hover span {
+    border-bottom: 1px solid #000;
+}
+
+.gnb .sub-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    justify-content: center;
+    height: 182px;
+    white-space: nowrap;
+}
+
+.gnb .sub-list.on {
+    display: flex;
+}
+
+.gnb .sub-item {
+    padding: 3px 13px;
+    line-height: 30px;
+    font-size: 17px;
+}
+
+.footer {
+    background: #f2f2f2;
+}
+
+.footer .inner {
+    padding: 25px 104px 25px 98px;
+}
+
+.footer .group-naver {
+    display: flex;
+}
+
+.footer .link-area .link {
+    display: inline-block;
+}
+
+.footer .link-area .link-naver {
+    line-height: 32px;
+    font-size: 18px;
+    letter-spacing: -0.32px;
+    color: #000;
+}
+
+.footer .link-area .link-policy {
+    margin-left: 30px;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.28px;
+    color: #909090;
+}
+
+.footer .related-area {
+    position: relative;
+    margin-left: auto;
+}
+
+.footer .related-area .btn-related {
+    position: relative;
+    width: 280px;
+    line-height: 42px;
+    text-align: left;
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.footer .related-area .btn-related::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 10px;
+    height: 6px;
+    background-position: -122px -93px;
+}
+
+.footer .related-area.on .btn-related {
+    padding: 0 12px;
+    font-size: 14px;
+    color: #000;
+    background: #fff;
+}
+
+.footer .related-area.on .btn-related::before {
+    transform: rotate(180deg);
+    right: 5px;
+}
+
+.footer .related-area .related-list {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    background: #fff;
+}
+
+.footer .related-area.on .related-list {
+    display: block;
+}
+
+.footer .related-area.on .related-item {
+    padding: 0 12px;
+    line-height: 42px;
+}
+
+.footer .related-area.on .related-item a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer .group-naver .related-item:hover {
+    background: #f2f2f2;
+}
+
+.footer .family-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+}
+
+.footer .family-item .link {
+    position: relative;
+    display: block;
+    line-height: 22px;
+    font-size: 14px;
+    letter-spacing: -0.28px;
+    font-weight: 500;
+    color: #909090;
+}
+
+.footer .family-item .link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 12px;
+    background: #909090;
+}
+
+.footer .family-item:last-child .link::after {
+    display: none;
+}
+
+@media (max-width: 1230px) {
+    .wrapper {
+        padding-top: 60px;
+    }
+
+    /* .gnb,
+    .gnb .link-list {
+        display: none
+    } */
+
+    .gnb {
+        display: none;
+    }
+
+    .header .inner {
+        height: 60px;
+        min-width: 320px;
+        max-width: 1320px;
+        padding: 0 22px;
+    }
+
+    .header .slide-btn {
+        background: url(../images/sp_mo.png) no-repeat;
+        background-size: 195px 181px;
+    }
+
+    .header .logo a {
+        width: 160px;
+        height: 23px;
+        background: url(../images/sp_mo.png) no-repeat;
+        background-position: 0 0;
+        background-size: 195px 181px;
+    }
+
+    /* 모바일 - 햄버거 버튼 클릭시 히든 메뉴 */
+    .header .slide-btn {
+        display: block;
+        width: 20px;
+        height: 14px;
+        margin-left: auto;
+        background-position: -85px -28px;
+    }
+
+    .header .menu-close {
+        width: 15px;
+        height: 15px;
+        background-position: -85px -49px;
+    }
+
+    .header .slide-nav {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        transform: translateX(100%);
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .header .slide-nav.on {
+        transform: translateY(0%);
+    }
+
+    .header .slide-nav .nav-list {
+        position: relative;
+    }
+
+    .header .slide-nav .nav-list1 {
+        padding: 11px 0 9px;
+    }
+
+    .header .slide-nav .link-nav {
+        display: block;
+        padding: 0 22px;
+        line-height: 46px;
+        font-size: 22px;
+        letter-spacing: -0.44px;
+    }
+
+    .header .slide-nav .link-teams.active {
+        background: #f2f2f2;
+    }
+
+    .header .slide-nav .link-teams.active .icon-down-arrow {
+        transform: rotate(-180deg);
+    }
+
+    .header .slide-nav .link-nav .sub-list {
+        display: none;
+    }
+
+    .header .slide-nav .icon-down-arrow {
+        display: inline-block;
+        width: 10px;
+        height: 6px;
+        margin: 20px 0 0 4px;
+        vertical-align: top;
+        background-position: -136px -49px;
+    }
+
+    .header .slide-nav .nav-tit {
+        font-size: 22px;
+        line-height: 46px;
+        letter-spacing: -0.44px;
+    }
+
+    .header .slide-nav .sub-list {
+        display: none;
+        padding: 3px 22px 15px;
+    }
+
+    .header .slide-nav .sub-list.on {
+        display: block;
+    }
+
+    .header .slide-nav .sub-item {
+        margin-top: 13px;
+    }
+
+    .header .slide-nav .sub-item .link-subnav {
+        padding-left: 20px;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.36px;
+    }
+
+    .header .slide-nav .nav-list2 {
+        padding: 10px 0 11px;
+    }
+
+    .header .slide-nav .nav-list+.nav-list:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 22px;
+        right: 22px;
+        height: 1px;
+        background-color: #d0d0d0;
+    }
+
+    .header .slide-nav .lang-list {
+        padding: 19px 0 11px;
+    }
+
+    .header .slide-nav .lang-item {
+        margin-bottom: 9px;
+    }
+
+    .header .slide-nav .lang-item .link {
+        font-size: 18px;
+        letter-spacing: -0.36px;
+        line-height: 28px;
+        padding: 0 22px;
+    }
+
+    .header .slide-nav .lang-item .dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 8px 10px 0 0;
+        vertical-align: top;
+        border-radius: 50%;
+        border: 1px solid #d0d0d0;
+    }
+
+    .header .slide-nav .lang-item.active .dot {
+        background: #000;
+    }
+
+    .header .slide-nav .lang-item:not(.active) .dot {
+        background: #fff;
+    }
+
+    .header .slide-nav .lang-item .tit {
+        position: relative;
+        font-size: 18px;
+        margin-left: -4px;
+    }
+
+    .footer .link-area .link-naver {
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        min-width: 0;
+    }
+
+    .inner {
+        max-width: 1320px;
+        min-width: 320px;
+        padding: 0 22px;
+    }
+
+    .lnb-container .group-menu .filter-list {
+        line-height: 26px;
+    }
+
+    .footer {
+        height: 158px;
+        padding: 25px 0 29px;
+        box-sizing: initial;
+    }
+
+    .footer .inner {
+        padding: 0 22px;
+    }
+
+    .footer .group-naver {
+        flex-direction: column;
+    }
+
+    .footer .link-area .link-naver {
+        font-size: 15px;
+    }
+
+    .footer .link-area .link-policy {
+        margin-left: 21px;
+    }
+
+    .footer .related-area {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .footer .related-area.on .btn-related {
+        font-size: 12px;
+        border-bottom: none;
+    }
+
+    .footer .related-area .btn-related {
+        width: 100%;
+        line-height: 40px;
+        font-size: 12px;
+        border-bottom: 1px solid #b4b4b4;
+    }
+
+    .footer .related-area.on .related-item a {
+        font-size: 12px;
+    }
+
+    .footer .family-list {
+        margin: 15px 0 0 0;
+    }
+
+    .footer .related-area.on .btn-related::before {
+        right: 10px;
+    }
+}

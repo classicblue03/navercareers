@@ -1,0 +1,167 @@
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.inner {
+    max-width: 1408px;
+    min-width: 1230px;
+    margin: 0 auto;
+    padding: 0 104px;
+}
+
+.header .logo a,
+.header .lang-wrap .arrow,
+.main .swiper .btn-wrap button,
+.sc-search .main-search .keyword-search .icon,
+.sc-search .main-container .tit-box .num::after,
+.footer .related-area .btn-related::before {
+    background: url(../images/sp_pc.png) no-repeat;
+    background-size: 328px 205px;
+}
+
+.header .close-btn,
+.sc-search .mobile-search .icon-box .icon {
+    background: url(../images/sp_mo.png) no-repeat;
+    background-size: 195px 181px;
+}
+
+.main .swiper .btn-wrap {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.main .swiper .btn-wrap button {
+    width: 33px;
+    height: 32px;
+}
+
+.main .swiper .btn-wrap .prev {
+    background-position: -187px -172px;
+}
+
+.main .swiper .btn-wrap .next {
+    background-position: -113px -172px;
+}
+
+.main .swiper .btn-wrap .swiper-button-disabled {
+    opacity: 0.3;
+}
+
+.main .group-title .title {
+    margin-bottom: 20px;
+    line-height: 71px;
+    font-size: 64px;
+    letter-spacing: -0.64px;
+    font-weight: 500;
+}
+
+.main .group-title .desc {
+    display: inline-block;
+    padding-right: 30px;
+    line-height: 32px;
+    font-size: 22px;
+    letter-spacing: -0.44px;
+    font-weight: 800;
+}
+
+.main .link-direct {
+    position: relative;
+    display: inline-block;
+    line-height: 18px;
+    vertical-align: top;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.36px;
+}
+
+.main .link-direct::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #000;
+}
+
+@media (max-width: 1230px) {
+
+    .header .logo a,
+    .header .slide-nav .icon-down-arrow,
+    .main .swiper .btn-wrap button,
+    .sc-search .lnb-container .btn-close,
+    .sc-search .mobile-search .icon-box .icon,
+    .sc-search .main-container .tit-box .num::after{
+        background: url(../images/sp_mo.png) no-repeat;
+        background-size: 195px 181px;
+    }
+
+    .main .swiper .btn-wrap button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .main .swiper .btn-wrap .prev {
+        background-position: -165px 0px;
+    }
+    .main .swiper .btn-wrap .next {
+        background-position: -35px -90px;
+    }
+
+    .sc-search .lnb-container .group-search .btn-search,
+    .sc-search .lnb-container .group-menu .ico-arrow {
+        background: url(../images/sp_pc.png) no-repeat;
+        background-size: 328px 205px;
+    }
+
+    .sc-search .lnb-container .btn-close {
+        position: absolute;
+        top: 24px;
+        left: 22px;
+        background-position: -110px -28px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .sc-search .main-container .tit-box .num::after {
+        width: 11px;
+        height: 11px;
+        background-position: -129px -28px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .main .link-direct {
+        line-height: 22px;
+        font-size: 12px;
+        letter-spacing: -0.24px;
+    }
+
+    .main .group-title .title {
+        margin-bottom: 11px;
+        line-height: 50px;
+        font-size: 36px;
+        letter-spacing: -0.7px;
+    }
+
+    .main .group-title .desc {
+        padding-right: 20px;
+        line-height: 26px;
+        font-size: 16px;
+        letter-spacing: -0.32px;
+    }
+}
